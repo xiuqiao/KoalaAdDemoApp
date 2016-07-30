@@ -11,4 +11,9 @@
     <string name="show_inter_txt">展示插屏广告</string>
     <string name="load_native_txt">加载原生广告</string>
     <string name="show_native_txt">展示原生广告</string>
+    <string name="about_title">关于Koala SDK</string>
+    <string name="native_ad_desc">提供聚合FAN以及Koala的原生广告,广告元素包含icon、title、desc、rate、creative大图等,大图标准尺寸1200x628</string>
+    <string name="banner_ad_desc">提供聚合Admob、FAN以及Koala的横幅广告,标准尺寸320x50</string>
+    <string name="inter_ad_desc">提供聚合Admob、FAN以及Koala的插屏广告</string>
+    <string name="video_ad_desc">CPM视频广告,标准尺寸320x250</string>
 </resources>

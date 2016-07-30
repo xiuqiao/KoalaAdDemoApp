@@ -27,7 +27,12 @@
         <activity android:name=".BannerAdActivity" />
         <activity android:name=".InterstitialAdActivity" />
         <activity android:name=".VideoAdActivity" />
-        <activity android:name=".AboutActivity" />
+
+        <activity android:name=".AboutActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/about_title"
+            >
+        </activity>
 
         <activity
             android:name="com.xinmei.adsdk.nativeads.NativeInterstitialAdActivity"
