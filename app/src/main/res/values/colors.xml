@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background">#D8D8D8</color>
+    <color name="colorBtnWhite">#FFFFFF</color>
+    <color name="colorBtnTxt">#071418</color>
+    <color name="colorBtnTxtWhite">#FFFFFF</color>
+    <color name="colorBtnGreen">#86B404</color>
+    <color name="topAdBackground">#424242</color>
+    <color name="iconBackground">#BDBDBD</color>
+    <color name="txtBackground">#FFFFFF</color>
+    <color name="creativeBackground">#00FF00</color>
+    <color name="ctaBtnBackground">#1499FF</color>
+    <color name="ad_view_background">#FFFFFF</color>
+</resources>

@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center_horizontal"
+    android:layout_centerVertical="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="koala.koalaaddemoapp.MainActivity">
+
+
+    <Button
+        android:id="@+id/native_ad_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/native_ad_txt"
+        android:background="@color/colorBtnWhite"
+        android:textColor="@color/colorBtnTxt"
+        />
+
+    <Button
+        android:id="@+id/banner_ad_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/banner_ad_txt"
+        android:background="@color/colorBtnWhite"
+        android:textColor="@color/colorBtnTxt"
+        android:layout_below="@+id/native_ad_btn"
+        android:layout_marginTop="8dp"
+        />
+
+    <Button
+        android:id="@+id/inter_ad_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/inter_ad_txt"
+        android:background="@color/colorBtnWhite"
+        android:textColor="@color/colorBtnTxt"
+        android:layout_below="@+id/banner_ad_btn"
+        android:layout_marginTop="8dp"
+        />
+
+    <Button
+        android:id="@+id/video_ad_btn"
+        android:text="@string/video_ad_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBtnWhite"
+        android:textColor="@color/colorBtnTxt"
+        android:layout_below="@+id/inter_ad_btn"
+        android:layout_marginTop="8dp"
+        />
+
+    <Button
+        android:id="@+id/about_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_txt"
+        android:background="@color/colorBtnWhite"
+        android:textColor="@color/colorBtnTxt"
+        android:layout_below="@+id/video_ad_btn"
+        android:layout_marginTop="8dp"
+        />
+
+</RelativeLayout>

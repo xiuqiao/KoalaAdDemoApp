@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Koala Ad</string>
+    <string name="native_ad_txt">原生广告演示</string>
+    <string name="banner_ad_txt">横幅广告演示</string>
+    <string name="inter_ad_txt">插屏广告演示</string>
+    <string name="video_ad_txt">视频广告演示</string>
+    <string name="about_txt">关于Koala SDK</string>
+    <string name="load_banner_txt">加载横幅广告</string>
+    <string name="load_video_txt">加载视频广告</string>
+    <string name="load_inter_txt">加载插屏广告</string>
+    <string name="show_inter_txt">展示插屏广告</string>
+    <string name="load_native_txt">加载原生广告</string>
+    <string name="show_native_txt">展示原生广告</string>
+</resources>
