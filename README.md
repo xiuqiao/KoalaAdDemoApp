@@ -205,14 +205,14 @@ public *;
 ## 4.主要类与接口
 ### KoalaADAgent
 广告相关操作类。
-init()	初始化SDK
-loadAd()	请求广告
-loadAdList()	请求广告列表
-loadInterstitialAd()	请求插屏广告
-registerNativeAdView()	注册广告View（插屏广告不需要）
-unregisterNativeAdView()	解除原生广告绑定（插屏广告不需要）
-showInterstitialAd()	显示插屏广告
-cancelAdPreload()	取消打开广告
+`init()`	初始化SDK  
+`loadAd()`	请求广告   
+`loadAdList()`	请求广告列表  
+`loadInterstitialAd()`	请求插屏广告   
+`registerNativeAdView()`	注册广告View（插屏广告不需要）  
+`unregisterNativeAdView()`	解除原生广告绑定（插屏广告不需要）  
+`showInterstitialAd()`	显示插屏广告  
+`cancelAdPreload()`	取消打开广告  
 
 ### KoalaConstants
 广告的相关常量，主要包括ICON的size、创意素材的size。  
