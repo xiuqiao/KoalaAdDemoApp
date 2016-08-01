@@ -30,6 +30,8 @@ Oid用来唯一标识APP中的具体某个广告位。
 	compile 'com.google.android.gms:play-services-ads:8.+'
 ```
 
+并确认导入`com.google.android.gms.ads.identifier`包下的类确保可以获取用户的GAID。
+
 ### 配置文件（AndroidManifest.xml）
 首先，需要添加权限：
 ```java
@@ -91,8 +93,6 @@ android:name="com.xinmei.adsdk.nativeads.NativeInterstitialAdActivity"
     android:name="com.google.android.gms.version"
     android:value="@integer/google_play_services_version" />
 ```
-
-并确认导入`com.google.android.gms.ads.identifier`包下的类确保可以获取用户的GAID。
 
 ### 请求原生广告
 1-需要创建ADRequestSetting对象，对广告进行相关配置。广告位OID是必备参数。其他可以指定的有icon的size（setIconSize，可选的参数有50x50、100x100、200x200）、广告创意大图的size（setImageSize，当前只支持1200x628）；  
