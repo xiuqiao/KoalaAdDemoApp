@@ -35,6 +35,15 @@ public class InterstitialAdActivity extends Activity implements View.OnClickList
         initWidget();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // destroy interstitial ad if necessary
+        if (mNativeAd != null){
+            KoalaADAgent.destroyInterstitialAd(mNativeAd);
+        }
+    }
+
     private void initWidget(){
         mLoadAdBtn = (Button) findViewById(R.id.load_inter_btn);
         mShowAdBtn = (Button) findViewById(R.id.show_inter_btn);
@@ -83,9 +92,6 @@ public class InterstitialAdActivity extends Activity implements View.OnClickList
             KoalaADAgent.showInterstitialAd(mNativeAd, new NativeAdListener.PreloadAdListener() {
                 @Override
                 public void onComplete(String s) {
-                    // destroy interstitial ad if necessary
-                    KoalaADAgent.destroyInterstitialAd(mNativeAd);
-                    mNativeAd = null;
                 }
 
                 @Override
