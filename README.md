@@ -204,7 +204,7 @@ public *;
 
 ## 4.主要类与接口
 ### KoalaADAgent
-广告相关操作类。
+广告相关操作类。  
 `init()`	初始化SDK  
 `loadAd()`	请求广告   
 `loadAdList()`	请求广告列表  
