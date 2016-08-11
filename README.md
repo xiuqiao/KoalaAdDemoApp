@@ -94,6 +94,13 @@ android:name="com.xinmei.adsdk.nativeads.NativeInterstitialAdActivity"
     android:value="@integer/google_play_services_version" />
 ```
 
+### 初始化SDK
+在使用SDK请求广告前，请务必初始化Koala SDK。
+```java
+KoalaADAgent.init(Context context);
+```
+初始化时机建议在应用首次启动。你并不需要在每次用户打开应用的时候执行该操作。
+
 ### 请求原生广告
 1-需要创建ADRequestSetting对象，对广告进行相关配置。广告位OID是必备参数。其他可以指定的有icon的size（setIconSize，可选的参数有50x50、100x100、200x200）、广告创意大图的size（setImageSize，当前只支持1200x628）；  
 2-加载广告：KoalaADAgent.loadAd()；  
