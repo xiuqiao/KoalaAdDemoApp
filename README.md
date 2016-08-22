@@ -243,3 +243,12 @@ Koala原生广告相关字段：
 1019	SDK没有初始化  
 1024	同一广告位广告请求太频繁，间隔短于1s  
 
+## 6.其他注意事项
+1.如果测试时使用Koala广告源的广告，请使用有Google Play Service的Android手机进行测试，否则会出现不返回广告的情况；  
+2.国内的广告Offer较少，因此测试的时候您可能会比较频繁的看到几条广告，建议使用VPN翻墙进行测试；  
+3.如果您对广告源有特殊要求（优先级或者广告源的placement id），欢迎联系运营相关人员；  
+4.如果使用Facebook原生广告的时候需要AdChoicesView，您可以通过以下代码获得：
+```java
+AdChoicesView adChoicesView = new AdChoicesView(context, facebookNativeAd, true);
+```
+5.为了提升广告效果，请不要重复初始化SDK，您只需要在第一次启动App的时候进行初始化；
