@@ -38,7 +38,6 @@ Oid用来唯一标识APP中的具体某个广告位。
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 ```
 
 你需要将appkey和secretkey加到AndroidManifest.xml：
