@@ -50,7 +50,8 @@ public class BannerAdActivity extends Activity {
         ADFactory.ADRequestSetting adRequestSetting = ADFactory.getADRequestSetting(KoalaAdDemoConstants.BANNER_AD_OID)
                 .setAdSource(KoalaConstants.AD_SOURCE_XM);
         KoalaBannerAdView koalaBannerAdView = (KoalaBannerAdView) findViewById(R.id.koala_banner_ad);
-        koalaBannerAdView.loadBannerAd(adRequestSetting, new NativeAdListener.RequestBannerAdListener() {
+
+        koalaBannerAdView.loadBannerAd(getApplicationContext(), adRequestSetting, new NativeAdListener.RequestBannerAdListener() {
             @Override
             public void onSuccess(KoalaBannerAdView koalaBannerAdView) {
                 Log.d(KoalaAdDemoConstants.LOG_TAG, "koala banner ad load succeed");
@@ -63,6 +64,11 @@ public class BannerAdActivity extends Activity {
                 Log.d(KoalaAdDemoConstants.LOG_TAG, "koala banner ad load failed, error msg > " + s);
                 mProgressBar.setVisibility(View.GONE);
                 Toast.makeText(BannerAdActivity.this, "横幅广告加载失败", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onClick(String s, String s1) {
+                Toast.makeText(BannerAdActivity.this, "横幅广告被点击", Toast.LENGTH_SHORT).show();
             }
         });
     }

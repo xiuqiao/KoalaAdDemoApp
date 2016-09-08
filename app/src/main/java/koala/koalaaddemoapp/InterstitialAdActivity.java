@@ -71,20 +71,36 @@ public class InterstitialAdActivity extends Activity implements View.OnClickList
     private void loadInterAd(){
         ADFactory.ADRequestSetting adRequestSetting = ADFactory.getADRequestSetting(KoalaAdDemoConstants.INTER_AD_OID)
                 .setImageSize(KoalaConstants.AD_IMAGE_1200x628);
-        KoalaADAgent.loadInterstitialAd(adRequestSetting, new NativeAdListener.RequestAdListener() {
+        KoalaADAgent.loadInterstitialAd(adRequestSetting, new NativeAdListener.InterstitialAdListener() {
             @Override
-            public void onSuccess(NativeAd nativeAd) {
+            public void onAdLoaded(NativeAd nativeAd) {
                 mNativeAd = nativeAd;
                 mProgressBar.setVisibility(View.GONE);
                 Toast.makeText(InterstitialAdActivity.this, "插屏广告加载成功", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onFailure(String s, int i) {
+            public void onError(String s, int i) {
                 mProgressBar.setVisibility(View.GONE);
                 Toast.makeText(InterstitialAdActivity.this, "插屏广告加载失败", Toast.LENGTH_SHORT).show();
             }
+
+            @Override
+            public void onAdClicked(String s, String s1) {
+                Toast.makeText(InterstitialAdActivity.this, "插屏广告点击", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onInterstitialDisplayed() {
+                Toast.makeText(InterstitialAdActivity.this, "插屏广告展示", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onInterstitialDismissed() {
+                Toast.makeText(InterstitialAdActivity.this, "插屏广告关闭", Toast.LENGTH_SHORT).show();
+            }
         });
+
     }
 
     private void showInterAd(){
