@@ -191,6 +191,13 @@ koalaVideoAdView.loadISVideoAd(mAdRequestSetting, new NativeAdListener.RequestVi
 
 ### 混淆
 对于SDK，你不需要进行任何混淆操作，只需要通过-libraryjars将整个jar包keep住。  
+
+如果你使用了视频广告，你需要：
+```java
+-keep public class com.kika.pluto.ad.KoalaVideoAdView {*;}
+-keep public class com.kika.pluto.ad.KoalaVideoAdView$* {*;}
+```
+
 如果使用Admob的广告，你需要：
 ```java
 -keep public class com.google.android.gms.ads.** {
