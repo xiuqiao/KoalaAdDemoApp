@@ -43,8 +43,8 @@
         />
 
     <Button
-        android:id="@+id/video_ad_btn"
-        android:text="@string/video_ad_txt"
+        android:id="@+id/appwall_btn"
+        android:text="@string/appwall_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorBtnWhite"
@@ -60,7 +60,7 @@
         android:text="@string/about_txt"
         android:background="@color/colorBtnWhite"
         android:textColor="@color/colorBtnTxt"
-        android:layout_below="@+id/video_ad_btn"
+        android:layout_below="@+id/appwall_btn"
         android:layout_marginTop="8dp"
         />
 

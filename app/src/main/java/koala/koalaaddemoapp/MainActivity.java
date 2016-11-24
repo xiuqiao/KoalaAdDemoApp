@@ -7,13 +7,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.kika.pluto.ad.KoalaADAgent;
+import com.xinmei.adsdk.nativeads.AppWall;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button mNativeAdBtn;
     private Button mBannerAdBtn;
     private Button mInterAdBtn;
-    private Button mVideoAdBtn;
+    private Button mAppWallBtn;
     private Button mAboutBtn;
 
     @Override
@@ -31,13 +32,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mNativeAdBtn = (Button) findViewById(R.id.native_ad_btn);
         mBannerAdBtn = (Button) findViewById(R.id.banner_ad_btn);
         mInterAdBtn = (Button) findViewById(R.id.inter_ad_btn);
-        mVideoAdBtn = (Button) findViewById(R.id.video_ad_btn);
+        mAppWallBtn = (Button) findViewById(R.id.appwall_btn);
         mAboutBtn = (Button) findViewById(R.id.about_btn);
 
         mNativeAdBtn.setOnClickListener(this);
         mBannerAdBtn.setOnClickListener(this);
         mInterAdBtn.setOnClickListener(this);
-        mVideoAdBtn.setOnClickListener(this);
+        mAppWallBtn.setOnClickListener(this);
         mAboutBtn.setOnClickListener(this);
     }
 
@@ -57,9 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(MainActivity.this, InterstitialAdActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.video_ad_btn:
-                intent = new Intent(MainActivity.this, VideoAdActivity.class);
-                startActivity(intent);
+            case R.id.appwall_btn:
+                KoalaADAgent.startAppWall();
                 break;
             case R.id.about_btn:
                 intent = new Intent(MainActivity.this, AboutActivity.class);

@@ -9,7 +9,8 @@ Koala 广告SDK针对Android平台广告的请求、展示打开以及安装转�
 >1.原生广告：icon、素材大图（1200x628）  
 2.横幅广告：标准尺寸320x50  
 3.插屏广告：标准插屏广告  
-4.视频广告：320x250（使用前请咨询我们的运营人员）  
+4.视频广告：320x250（使用前请咨询我们的运营人员）
+5.广告墙: 提供丰富的多种广告(编辑精选、游戏类、工具类)
 
 ## 2.App-key以及Oid申请
 App key 以及 secret key都是用来唯一标识一款APP。  
@@ -84,6 +85,15 @@ android:name="com.xinmei.adsdk.nativeads.NativeInterstitialAdActivity"
  android:name="com.google.android.gms.ads.AdActivity"
     android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
     android:theme="@android:style/Theme.Translucent" />
+```
+
+如果你需要使用Koala的广告墙，你需要加入：
+```java
+<activity
+    android:name="com.xinmei.adsdk.nativeads.AppWall"
+    android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+    android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+</activity>
 ```
 
 **由于我们需要获取gaid进行广告转化归因，你需要加入:**
@@ -187,6 +197,12 @@ koalaVideoAdView.loadISVideoAd(mAdRequestSetting, new NativeAdListener.RequestVi
         Log.d("video ad closed");
     }
 });
+```
+
+### 广告墙
+直接调用
+```
+KoalaADAgent.startAppWall();
 ```
 
 ### 混淆
