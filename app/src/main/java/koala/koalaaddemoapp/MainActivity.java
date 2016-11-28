@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.kika.pluto.ad.KoalaADAgent;
-import com.xinmei.adsdk.nativeads.AppWall;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 

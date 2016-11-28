@@ -32,5 +32,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:8.3.0'
     compile 'com.facebook.android:audience-network-sdk:4.8.0@aar'
     testCompile 'junit:junit:4.12'
-    compile files('libs/koala_ad_v4.1.jar')
+    compile files('libs/koala_ad_v4.2.jar')
 }
