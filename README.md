@@ -23,7 +23,7 @@ Oid用来唯一标识APP中的具体某个广告位。
 
 如果你需要使用facebook的广告，你需要导入facebook audience network SDK到你的工程，Android Studio下你需要在build.gradle的dependencies里加入：
 ```java
-	compile 'com.facebook.android:facebook-android-sdk:4.+'
+	compile 'com.facebook.android:audience-network-sdk:4.+'
 ```
 
 如果你需要使用admob的广告，Android Studio下你需要在build.gradle的dependencies里加入：
