@@ -62,7 +62,7 @@ In order to filter the installed applications to enhance ad effects, you need to
 </receiver>
 ```
 
-If you need to use the Facebook interstitial ads, you need to add
+If you need to use the Facebook interstitial ads, you should add
 ```java
 <activity
     android:name="com.facebook.ads.InterstitialAdActivity"
@@ -70,7 +70,7 @@ If you need to use the Facebook interstitial ads, you need to add
 </activity>
 ```
 
-If you need to use the Koala interstitial ads, you need to add
+If you need to use the Koala interstitial ads, you should add
 ```java
 <activity
 android:name="com.xinmei.adsdk.nativeads.NativeInterstitialAdActivity"
@@ -79,7 +79,7 @@ android:name="com.xinmei.adsdk.nativeads.NativeInterstitialAdActivity"
 </activity>
 ```
 
-If you need to use the Admob ads, you need to add
+If you need to use the Admob ads, you should add
 ```java
 <activity
  android:name="com.google.android.gms.ads.AdActivity"
@@ -87,7 +87,7 @@ If you need to use the Admob ads, you need to add
     android:theme="@android:style/Theme.Translucent" />
 ```
 
-If you need to use the Koala advertising wall, you need to add
+If you need to use the Koala advertising wall, you should add
 ```java
 <activity
     android:name="com.xinmei.adsdk.nativeads.AppWall"
@@ -96,7 +96,7 @@ If you need to use the Koala advertising wall, you need to add
 </activity>
 ```
 
-**Due to we need to get gaid for ad transformation attribution, you need to join**
+**Due to we need to get gaid for ad transformation attribution, you should join**
 ```java
 <meta-data
     android:name="com.google.android.gms.version"
