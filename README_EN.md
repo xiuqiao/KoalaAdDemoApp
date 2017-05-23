@@ -158,7 +158,7 @@ koalaBannerAdView.loadBannerAd(mAdRequestSetting, new RequestBannerAdListener() 
 ```
 
 ### Video ads
-1.Add in the layout file that needs to display video ads:
+1.Add in the layout file that needs to display video ads
 ```java
 <com.kika.pluto.ad.KoalaVideoAdView
      android:id = "@+id/koalaVideoAd"
@@ -168,7 +168,7 @@ koalaBannerAdView.loadBannerAd(mAdRequestSetting, new RequestBannerAdListener() 
  ></com.kika.pluto.ad.KoalaVideoAdView>
 ```
 
-2.Create a KoalaVideoAdView object, load video ads:
+2.Create a KoalaVideoAdView object, load video ads
 ```java
 KoalaVideoAdView koalaVideoAdView = (KoalaVideoAdView) findViewById(R.id.koalaVideoAd);
 koalaVideoAdView.loadISVideoAd(mAdRequestSetting, new NativeAdListener.RequestVideoAdListener() {
@@ -208,13 +208,13 @@ KoalaADAgent.startAppWall();
 ### Obfuscation
 For SDK, you don't need to do any obfuscation, and you just need to keep the entire jar package through -libraryjars.
 
-If use video ads, you need to:
+If use video ads, you need to
 ```java
 -keep public class com.kika.pluto.ad.KoalaVideoAdView {*;}
 -keep public class com.kika.pluto.ad.KoalaVideoAdView$* {*;}
 ```
 
-If use Admob's ads, you need to:
+If use Admob's ads, you need to
 ```java
 -keep public class com.google.android.gms.ads.** {
 public *;
@@ -224,7 +224,7 @@ public *;
 }
 ```
 
-As for Facebook Audience Network, you need to:
+As for Facebook Audience Network, you need to
 ```java
 -keep class com.facebook.** { *; }
 -keep interface com.facebook.** { *; }
@@ -251,7 +251,7 @@ Advertising related constants, including the ICON size, creative material size.
 `AD_ICON_SIZE_200`   Advertising icon material size,200x200	
 
 ### NativeAd	
-Koala native ads related fields:
+Koala native ads related fields
 `icon`	        String type, icon path  	
 `title`		String type, ads title 		
 `description`	String type, ads description  		
