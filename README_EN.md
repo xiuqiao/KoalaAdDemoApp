@@ -41,7 +41,7 @@ At first, you need to add permissions
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 ```
 
-You need t add appkey and secretkey into AndroidManifest.xml
+You need to add appkey and secretkey into AndroidManifest.xml
 ```java
 <meta-data
     android:name="AGENT_APPKEY"
@@ -96,7 +96,7 @@ If you need to use the Koala advertising wall, you need to add
 </activity>
 ```
 
-**Due to we need to get gaid for ad transformation attribution, you need to join:**
+**Due to we need to get gaid for ad transformation attribution, you need to join**
 ```java
 <meta-data
     android:name="com.google.android.gms.version"
@@ -111,20 +111,20 @@ KoalaADAgent.init(Context context);
 Initialization timing is recommended in application first boot. You don't have to perform this operation every time the user opens the application.
 
 ### Request native ads
-1-needs to create ADRequestSetting objects to configure the advertisements. Other can be specified are icon's size(setIconSize，the optional parameters are 50x50, 100x100, and 200x200), Advertising creative big picture's size(setImageSize，currently only 1200x628 is supported);     
-2-load ads:KoalaADAgent.loadAd();   
-3-if the ad request is successful, you can get the data for the ad and assemble it into a View as needed;   
-4-register view and ads:KoalaADAgent.registerNativeAdView();    
+1-Needs to create ADRequestSetting objects to configure the advertisements. Other can be specified are icon's size(setIconSize，the optional parameters are 50x50, 100x100, and 200x200), Advertising creative big picture's size(setImageSize，currently only 1200x628 is supported);            
+2-Load ads:KoalaADAgent.loadAd();        
+3-If the ad request is successful, you can get the data for the ad and assemble it into a View as needed;       
+4-Register view and ads:KoalaADAgent.registerNativeAdView();        
 5-SDK handles the click event of the view and calls back;     
-6- when the ad is no longer used, remove the ad bindings:KoalaADAgent.unregisterNativeAdView();     
+6-When the ad is no longer used, remove the ad bindings:KoalaADAgent.unregisterNativeAdView();     
 
 ### Request interstitial ads
-1-creates ADRequestSetting objects that configure the ads. The ad bit OID is an essential parameter;      
-2-request interstitial ads:KoalaADAgent.loadInterstitialAd();     
-3-ask for a successful ad campaign at the right time:KoalaADAgent.showInterstitialAd();     
-
+1-Creates ADRequestSetting objects that configure the ads. The ad bit OID is an essential parameter;           
+2-Request interstitial ads:KoalaADAgent.loadInterstitialAd();         
+3-Ask for a successful ad campaign at the right time:KoalaADAgent.showInterstitialAd();              
+     
 ### Banner ads
-1.add in the layout file that needs to display banner ads
+1.Add in the layout file that needs to display banner ads
 ```java
 <com.xinmei.adsdk.nativeads.KoalaBannerAdView 
     android:id = "@+id/koalaAd"
@@ -134,7 +134,7 @@ Initialization timing is recommended in application first boot. You don't have t
 ></com.xinmei.adsdk.nativeads.KoalaBannerAdView>
 ```
 
-2.create a KoalaBannerAdView object in the function you want to load banner ads, then load the banner ads directly
+2.Create a KoalaBannerAdView object in the function you want to load banner ads, then load the banner ads directly
 ```java
 ADFactory.ADRequestSetting mAdRequestSetting = ADFactory.getADRequestSetting().setOid(TEST_OID);
 KoalaBannerAdView koalaBannerAdView = (KoalaBannerAdView) findViewById(R.id.koalaAd);
@@ -158,7 +158,7 @@ koalaBannerAdView.loadBannerAd(mAdRequestSetting, new RequestBannerAdListener() 
 ```
 
 ### Video ads
-1.add in the layout file that needs to display video ads:
+1.Add in the layout file that needs to display video ads:
 ```java
 <com.kika.pluto.ad.KoalaVideoAdView
      android:id = "@+id/koalaVideoAd"
@@ -168,7 +168,7 @@ koalaBannerAdView.loadBannerAd(mAdRequestSetting, new RequestBannerAdListener() 
  ></com.kika.pluto.ad.KoalaVideoAdView>
 ```
 
-2.create a KoalaVideoAdView object, load video ads:
+2.Create a KoalaVideoAdView object, load video ads:
 ```java
 KoalaVideoAdView koalaVideoAdView = (KoalaVideoAdView) findViewById(R.id.koalaVideoAd);
 koalaVideoAdView.loadISVideoAd(mAdRequestSetting, new NativeAdListener.RequestVideoAdListener() {
@@ -206,9 +206,9 @@ KoalaADAgent.startAppWall();
 ```
 
 ### Obfuscation
-For SDK, you dont need to do any obfuscation, and you just need to keep the entire jar package through -libraryjars.
+For SDK, you don't need to do any obfuscation, and you just need to keep the entire jar package through -libraryjars.
 
-If you use video ads, you need to:
+If use video ads, you need to:
 ```java
 -keep public class com.kika.pluto.ad.KoalaVideoAdView {*;}
 -keep public class com.kika.pluto.ad.KoalaVideoAdView$* {*;}
@@ -234,39 +234,39 @@ As for Facebook Audience Network, you need to:
 ## 4.Main classes and interfaces
 ### KoalaADAgent
 Advertising related operations.   
-`init()`	Initialize SDK     
-`loadAd()`	Request advertisement    
-`loadAdList()`	Request advertisement list        
-`loadInterstitialAd()`	Request interstitial ads
-`registerNativeAdView()`	Register native ads view（interstitial ads are not required)     
-`unregisterNativeAdView()`	Unregister native ads view（interstitial ads are not required)        
-`showInterstitialAd()`	Show interstitial ads    
-`cancelAdPreload()`	Cancel ads preload   
+`init()`		   Initialize SDK           
+`loadAd()`		   Request advertisement         
+`loadAdList()`		   Request advertisement list             
+`loadInterstitialAd()`	   Request interstitial ads     	
+`registerNativeAdView()`   Register native ads view（interstitial ads are not required)  		   
+`unregisterNativeAdView()` Unregister native ads view（interstitial ads are not required)		        
+`showInterstitialAd()`	   Show interstitial ads    	
+`cancelAdPreload()`	   Cancel ads preload  			 
 
 ### KoalaConstants
-Advertising related constants, including the ICON size, creative material size.
-`AD_IMAGE_1200x628`  Advertising creative big picture's standard size 
-`AD_ICON_SIZE_50`    Advertising icon material size,50x50 
-`AD_ICON_SIZE_100`   Advertising icon material size,100x100  
-`AD_ICON_SIZE_200`   Advertising icon material size,200x200
+Advertising related constants, including the ICON size, creative material size.	
+`AD_IMAGE_1200x628`  Advertising creative big picture's standard size 	
+`AD_ICON_SIZE_50`    Advertising icon material size,50x50 	
+`AD_ICON_SIZE_100`   Advertising icon material size,100x100  	
+`AD_ICON_SIZE_200`   Advertising icon material size,200x200	
 
 ### NativeAd	
 Koala native ads related fields:
-`icon`	String type, icon path  
-`title`	String type, ads title 
-`description`	String type, ads description  
-`rate`	String type, may be empty,ads rate(0 to 5 points)  
-`creative`	Map type, key is the size of the material map, and value is its URL  
-`callToAction`	String type, ads call to action calling language
+`icon`	        String type, icon path  	
+`title`		String type, ads title 		
+`description`	String type, ads description  		
+`rate`		String type, may be empty,ads rate(0 to 5 points)  		
+`creative`	Map type, key is the size of the material map, and value is its URL  			
+`callToAction`	String type, ads call to action calling language			
 
 ## 5.Error code description
-1001	No fill  
-1004	Oid is empty 
-1005	No network service  
-1019	SDK is not initialized  
-1024	The same ad ad request is too frequent, the interval is shorter than 1s
+1001	No fill  	
+1004 	Oid is empty 	
+1005	No network service  	
+1019    SDK is not initialized  	
+1024	The same ad ad request is too frequent, the interval is shorter than 1s	
 
-## 6.Other considerations
+## 6.Other considerations	
 1.If you use ads for Koala ad sources when testing, use the Android Google Service Play mobile phone to test, otherwise there will be no return advertising;
 2.Domestic advertising offer is less,so you may frequently see a few ads when testing, we recommend using VPN to test;
 3.If you have special requirements for advertising source (priority or placement ID of advertising source), please contact the operators concerned;
