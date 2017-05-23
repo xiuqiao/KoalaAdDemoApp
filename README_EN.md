@@ -21,12 +21,12 @@ Please contact to our operators if you need any help.
 ### Add the appropriate jar package
 You need to import our koala SDK jar package to your project;
 
-If you need to use Facebook ads, you need to import Facebook audience network SDK to your project. In Android Studio, you need to join in build.gradle's dependencies
+If you need to use Facebook ads, you should import Facebook audience network SDK to your project. In Android Studio, you need to join in build.gradle's dependencies
 ```java
 	compile 'com.facebook.android:audience-network-sdk:4.+'
 ```
 
-If you need to use AdMob ads, you need to add to build.gradle's dependencies in Android Studio
+If you need to use AdMob ads, you should add to build.gradle's dependencies in Android Studio
 ```java
 	compile 'com.google.android.gms:play-services-ads:8.+'
 ```
