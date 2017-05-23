@@ -198,6 +198,35 @@ koalaVideoAdView.loadISVideoAd(mAdRequestSetting, new NativeAdListener.RequestVi
     }
 });
 ```
+### 关键词广告
+1.我们给您返回的广告数据类型与我们的Native广告数据类型一致,所以在数据处理的过程中,可能会使用同样的对象或方法.
+
+2.请求广告:
+* 1)初始化一个ADRequestSetting:
+
+```java
+ADFactory.ADRequestSetting adRequestSetting = ADFactory.getADRequestSetting("我们为您提供的OID").setKeyword("您的关键词"); 
+```
+如果您当前**没有关键词可用**的话,也就是您**未在请求中设置keyword**,我们的后台会有默认的关键词,其来源是**网络上搜索最多的商品,App等的关键词**.
+
+* 2)使用KoalaADAgent请求广告:
+
+```java
+KoalaADAgent.loadTextSearchAd(adRequestSetting, new NativeAdListener.RequestAdListener() {
+    @Override
+    public void onSuccess(NativeAd nativeAd) {
+      // 这里可以拿到广告请求结果
+    }
+
+    @Override
+    public void onFailure(String s, int i) {
+        
+    }
+});
+```
+
+3.广告的展示:
+我们为您提供数据,具体的UI效果您可以根据您的App的具体情况去设计.
 
 ### 广告墙
 直接调用
