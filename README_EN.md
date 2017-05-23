@@ -246,10 +246,10 @@ Advertising related operations.
 
 ### KoalaConstants
 Advertising related constants, including the ICON size, creative material size.
-`AD_IMAGE_1200x628`	Advertising creative big picture's standard size
-`AD_ICON_SIZE_50`	Advertising icon material size,50x50
-`AD_ICON_SIZE_100`	Advertising icon material size,100x100
-`AD_ICON_SIZE_200`	Advertising icon material size,200x200
+`AD_IMAGE_1200x628`	Advertising creative big picture's standard size   
+`AD_ICON_SIZE_50`	Advertising icon material size,50x50    
+`AD_ICON_SIZE_100`	Advertising icon material size,100x100    
+`AD_ICON_SIZE_200`	Advertising icon material size,200x200    
 
 
 ### NativeAd	
