@@ -233,31 +233,34 @@ As for Facebook Audience Network, you need to
 
 ## 4.Main classes and interfaces
 ### KoalaADAgent
-Advertising related operations.   
-`init()`		   Initialize SDK           
-`loadAd()`		   Request advertisement         
-`loadAdList()`		   Request advertisement list             
-`loadInterstitialAd()`	   Request interstitial ads     	
-`registerNativeAdView()`   Register native ads view（interstitial ads are not required)  		   
-`unregisterNativeAdView()` Unregister native ads view（interstitial ads are not required)		        
-`showInterstitialAd()`	   Show interstitial ads    	
-`cancelAdPreload()`	   Cancel ads preload  			 
+Advertising related operations. 
+`init()`		   Initialize SDK 
+`loadAd()`		   Request advertisement   
+`loadAdList()`		   Request advertisement list  
+`loadInterstitialAd()`	   Request interstitial ads       
+`registerNativeAdView()`   Register native ads view（interstitial ads are not required) 
+`unregisterNativeAdView()` Unregister native ads view（interstitial ads are not required)  
+`showInterstitialAd()`	   Show interstitial ads    	    
+`cancelAdPreload()`	   Cancel ads preload  
+
 
 ### KoalaConstants
-Advertising related constants, including the ICON size, creative material size.	
-`AD_IMAGE_1200x628`  Advertising creative big picture's standard size 	
-`AD_ICON_SIZE_50`    Advertising icon material size,50x50 	
-`AD_ICON_SIZE_100`   Advertising icon material size,100x100  	
-`AD_ICON_SIZE_200`   Advertising icon material size,200x200	
+Advertising related constants, including the ICON size, creative material size.
+`AD_IMAGE_1200x628`  Advertising creative big picture's standard size 
+`AD_ICON_SIZE_50`    Advertising icon material size,50x50
+`AD_ICON_SIZE_100`   Advertising icon material size,100x100
+`AD_ICON_SIZE_200`   Advertising icon material size,200x200 
+
 
 ### NativeAd	
 Koala native ads related fields
-`icon`	        String type, icon path  	
-`title`		String type, ads title 		
-`description`	String type, ads description  		
-`rate`		String type, may be empty,ads rate(0 to 5 points)  		
-`creative`	Map type, key is the size of the material map, and value is its URL  			
-`callToAction`	String type, ads call to action calling language			
+`icon`	        String type, icon path    
+`title`		String type, ads title  
+`description`	String type, ads description   
+`rate`		String type, may be empty,ads rate(0 to 5 points)    
+`creative`	Map type, key is the size of the material map, and value is its URL    
+`callToAction`	String type, ads call to action calling language  
+
 
 ## 5.Error code description
 1001	No fill  	
